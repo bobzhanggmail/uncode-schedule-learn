@@ -12,6 +12,12 @@
 		<spring.version>4.0.0.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+		<!-- mvn install:install-file -Dfile=C:\Users\GYK\Desktop\apidocs\uncode-schedule-0.7.0.jar -DgroupId=com.uncode.schedule -DartifactId=uncode-schedule -Dversion=0.7.0 -Dpackaging=jar -->
+		<dependency>
+			<groupId>com.uncode.schedule</groupId>
+			<artifactId>uncode-schedule</artifactId>
+			<version>0.7.0</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>jstl-api</artifactId>
@@ -49,7 +55,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-<dependency>
+		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
