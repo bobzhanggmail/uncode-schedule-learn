@@ -18,5 +18,10 @@ public class PersonDaoTest extends AbstractJUnit4SpringContextTests {
 	public void test() {
 		System.out.println(personDao.getName(10));
 	}
+	
+	@Test
+	public void testIncreateAge(){
+		System.out.println(personDao.increaseAge("zhangsan8"));
+	}
 
 }

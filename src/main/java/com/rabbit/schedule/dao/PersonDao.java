@@ -15,4 +15,10 @@ public class PersonDao {
 		Object[] params = {id};
 		return jdbcTemplate.queryForObject(sql, params, String.class);
 	}
+	
+	public int increaseAge(String name){
+		String sql = "update person set age=age+1 where name = ?";
+		Object[] params = { name };
+		return jdbcTemplate.update(sql, params);
+	}
 }

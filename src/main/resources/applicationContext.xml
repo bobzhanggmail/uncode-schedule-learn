@@ -7,24 +7,21 @@
         http://www.springframework.org/schema/task
         http://www.springframework.org/schema/task/spring-task-3.0.xsd">
         
-        
-	    <bean id="zkScheduleManager" class="cn.uncode.schedule.ZKScheduleManager"
-			init-method="init">
+	    <bean id="zkScheduleManager" class="cn.uncode.schedule.ZKScheduleManager" init-method="init">
 			<property name="zkConfig">
-		           <map>
-		              <entry key="zkConnectString" value="192.168.7.149:2181" />
-		              <entry key="rootPath" value="/uncode/schedule" />
-		              <entry key="zkSessionTimeout" value="60000" />
-		              <entry key="userName" value="ScheduleAdmin" />
-		              <entry key="password" value="password" />
-		              <entry key="autoRegisterTask" value="true" />
-		           </map>
+	           <map>
+	              <entry key="zkConnectString" value="192.168.7.149:2181" />
+	              <entry key="rootPath" value="/uncode/schedule" />
+	              <entry key="zkSessionTimeout" value="60000" />
+	              <entry key="userName" value="ScheduleAdmin" />
+	              <entry key="password" value="password" />
+	              <entry key="autoRegisterTask" value="true" />
+	           </map>
 			</property>
 		</bean>	
 
 
 	    <bean id="taskObj" class="com.rabbit.schedule.task.SimpleTask"/>
-	
 	    <task:scheduled-tasks scheduler="zkScheduleManager">
 	        <task:scheduled ref="taskObj" method="print"  fixed-rate="5000"/>
 	    </task:scheduled-tasks>
