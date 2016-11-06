@@ -1,4 +1,4 @@
-/*package com.rabbit.schedule.dao;
+package com.rabbit.schedule.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,4 +25,3 @@ public class PersonDaoTest extends AbstractJUnit4SpringContextTests {
 	}
 
 }
-*/

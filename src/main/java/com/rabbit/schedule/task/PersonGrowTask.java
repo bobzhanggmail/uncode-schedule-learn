@@ -1,4 +1,4 @@
-/*package com.rabbit.schedule.task;
+package com.rabbit.schedule.task;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,4 +20,3 @@ public class PersonGrowTask {
 		personDao.increaseAge("zhangsan8");
 	}
 }
-*/
