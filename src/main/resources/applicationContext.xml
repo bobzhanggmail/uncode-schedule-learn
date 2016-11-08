@@ -16,6 +16,8 @@
 				<entry key="userName" value="ScheduleAdmin" />
 				<entry key="password" value="password" />
 				<entry key="autoRegisterTask" value="true" />
+				<entry key="isCheckParentPath" value="true" />
+              	<!-- <entry key="ipBlacklist" value="127.0.0.2,127.0.0.3" />  -->
 			</map>
 		</property>
 	</bean>
