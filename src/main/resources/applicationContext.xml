@@ -46,5 +46,8 @@
 	<task:scheduled-tasks scheduler="zkScheduleManager">
 		<task:scheduled ref="simpleTask" method="print4" cron="0 0/30 * * * ?" />
 	</task:scheduled-tasks>
+	
+	<!-- Spring定时器注解开关
+	<task:annotation-driven scheduler="zkScheduleManager" />-->
 
 </beans>

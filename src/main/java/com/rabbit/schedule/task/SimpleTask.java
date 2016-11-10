@@ -2,6 +2,7 @@ package com.rabbit.schedule.task;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 
@@ -13,6 +14,13 @@ public class SimpleTask {
 
     private static int i = 0;
     private Logger log = LoggerFactory.getLogger(SimpleTask.class);
+    
+    //@Scheduled(fixedDelay = 1000)
+    public void annoPrint(){
+    	log.info("===========annoPrint start!=========");
+        log.info("annoPrint:"+i);i++;
+        log.info("===========annoPrint end !=========");
+    }
     
     public void print() {
     	log.info("===========print start!=========");
