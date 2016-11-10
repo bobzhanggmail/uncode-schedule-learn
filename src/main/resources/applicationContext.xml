@@ -23,8 +23,28 @@
 	</bean>
 
 	<!-- 以下是定时任务的配置 -->
-	<task:scheduled-tasks scheduler="zkScheduleManager">
+	<!-- <task:scheduled-tasks scheduler="zkScheduleManager">
 		<task:scheduled ref="personGrowTask" method="grow" fixed-rate="20000" />
+	</task:scheduled-tasks> -->
+	
+	<task:scheduled-tasks scheduler="zkScheduleManager">
+		<task:scheduled ref="simpleTask" method="print" cron="0/30 * * * * ?" />
+	</task:scheduled-tasks>
+	
+	<task:scheduled-tasks scheduler="zkScheduleManager">
+		<task:scheduled ref="simpleTask" method="print1" cron="0 0/10 * * * ?" />
+	</task:scheduled-tasks>
+	
+	<task:scheduled-tasks scheduler="zkScheduleManager">
+		<task:scheduled ref="simpleTask" method="print2" cron="0 0/5 * * * ?" />
+	</task:scheduled-tasks>
+	
+	<task:scheduled-tasks scheduler="zkScheduleManager">
+		<task:scheduled ref="simpleTask" method="print3" cron="0/60 * * * * ?" />
+	</task:scheduled-tasks>
+	
+	<task:scheduled-tasks scheduler="zkScheduleManager">
+		<task:scheduled ref="simpleTask" method="print4" cron="0 0/30 * * * ?" />
 	</task:scheduled-tasks>
 
 </beans>

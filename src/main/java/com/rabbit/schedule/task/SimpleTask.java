@@ -1,5 +1,7 @@
 package com.rabbit.schedule.task;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 
@@ -10,35 +12,36 @@ import org.springframework.stereotype.Component;
 public class SimpleTask {
 
     private static int i = 0;
+    private Logger log = LoggerFactory.getLogger(SimpleTask.class);
     
     public void print() {
-        System.out.println("===========start!=========");
-        System.out.println("I:"+i);i++;
-        System.out.println("=========== end !=========");
+    	log.info("===========print start!=========");
+        log.info("print:"+i);i++;
+        log.info("===========print end !=========");
     }
     
     public void print1() {
-        System.out.println("===========start!=========");
-        System.out.println("print1:"+i);i++;
-        System.out.println("=========== end !=========");
+        log.info("===========print1 start!=========");
+        log.info("print1:"+i);i++;
+        log.info("===========print1 end !=========");
     }
     
     public void print2() {
-        System.out.println("===========start!=========");
-        System.out.println("print2:"+i);i++;
-        System.out.println("=========== end !=========");
+        log.info("===========print2 start!=========");
+        log.info("print2:"+i);i++;
+        log.info("===========print2 end !=========");
     }
     
     public void print3() {
-        System.out.println("===========start!=========");
-        System.out.println("print3:"+i);i++;
-        System.out.println("=========== end !=========");
+        log.info("===========print3 start!=========");
+        log.info("print3:"+i);i++;
+        log.info("===========print3 end !=========");
     }
     
     public void print4() {
-        System.out.println("===========start!=========");
-        System.out.println("print4:"+i);i++;
-        System.out.println("=========== end !=========");
+        log.info("===========print4 start!=========");
+        log.info("print4:"+i);i++;
+        log.info("===========print4 end !=========");
     }
     
 
