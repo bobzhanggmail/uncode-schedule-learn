@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Test;
+
+import cn.uncode.schedule.util.ScheduleUtil;
+
 public class MainTest {
 
 	public static void main(String[] args) {
@@ -16,4 +20,11 @@ public class MainTest {
 		
 		System.out.println(list.get(0));
 	}
+
+	@Test
+	public void testProperties(){
+		System.out.println("qqqqqqqqq");
+		System.out.println(ScheduleUtil.getServerCode());
+	}
+
 }
