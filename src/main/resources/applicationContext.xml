@@ -17,7 +17,7 @@
 				<entry key="password" value="password" />
 				<entry key="autoRegisterTask" value="true" />
 				<entry key="isCheckParentPath" value="true" />
-              	<!-- <entry key="ipBlacklist" value="127.0.0.2,127.0.0.3" />  -->
+              	<entry key="ipBlacklist" value="192.168.7.231" />
 			</map>
 		</property>
 	</bean>
@@ -32,11 +32,11 @@
 	</task:scheduled-tasks>
 	
 	<task:scheduled-tasks scheduler="zkScheduleManager">
-		<task:scheduled ref="simpleTask" method="print1" cron="0 0/10 * * * ?" />
+		<task:scheduled ref="simpleTask" method="print1" cron="0/40 * * * * ?" />
 	</task:scheduled-tasks>
 	
 	<task:scheduled-tasks scheduler="zkScheduleManager">
-		<task:scheduled ref="simpleTask" method="print2" cron="0 0/5 * * * ?" />
+		<task:scheduled ref="simpleTask" method="print2" cron="0/50 * * * * ?" />
 	</task:scheduled-tasks>
 	
 	<task:scheduled-tasks scheduler="zkScheduleManager">
@@ -44,7 +44,7 @@
 	</task:scheduled-tasks>
 	
 	<task:scheduled-tasks scheduler="zkScheduleManager">
-		<task:scheduled ref="simpleTask" method="print4" cron="0 0/30 * * * ?" />
+		<task:scheduled ref="simpleTask" method="print4" cron="0 0/2 * * * ?" />
 	</task:scheduled-tasks>
 	
 	<!-- Spring定时器注解开关
