@@ -15,7 +15,7 @@ public class SimpleTask {
     private static int i = 0;
     private Logger log = LoggerFactory.getLogger(SimpleTask.class);
     
-    //@Scheduled(fixedDelay = 1000)
+    @Scheduled(fixedDelay = 5000)
     public void annoPrint(){
     	log.info("===========annoPrint start!=========");
         log.info("annoPrint:"+i);i++;
