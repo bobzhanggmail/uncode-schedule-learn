@@ -10,10 +10,10 @@ public class SimpleUncodeTask {
 	private static int i = 0;
     private Logger log = LoggerFactory.getLogger(SimpleUncodeTask.class);
     
-    public void uncodePrint1(){
-    	log.info("===========uncodePrint1 start!=========");
+    public void uncodePrint1(String name){
+    	log.info("===========uncodePrint1 start!name:{}=========", name);
         log.info("uncodePrint1:"+i);i++;
-        log.info("===========uncodePrint1 end !=========");
+        log.info("===========uncodePrint1 end !name:{}=========", name);
     }
     
     public void uncodePrint2(){
