@@ -17,7 +17,12 @@ public class HelloController {
 		TaskDefine task = new TaskDefine();
 		task.setTargetBean("simpleUncodeTask");
 		task.setTargetMethod("uncodePrint3");
-		ConsoleManager.runTask(task);
+		try {
+			ConsoleManager.runTask(task);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "hello " + name;
 	}
 }

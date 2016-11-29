@@ -53,6 +53,16 @@
 		<servlet-name>UncodeSchedule</servlet-name>
 		<url-pattern>/uncode/schedule</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 配置 uncode schedule 手动执行器 -->
+	<servlet>
+		<servlet-name>ScheduleManual</servlet-name>
+		<servlet-class>cn.uncode.schedule.web.ManualServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ScheduleManual</servlet-name>
+		<url-pattern>/schedule/manual</url-pattern>
+	</servlet-mapping>
 
 	<!-- 解决中文乱码问题 -->
 	<!-- Character Encoding filter -->
